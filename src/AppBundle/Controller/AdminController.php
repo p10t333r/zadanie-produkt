@@ -57,7 +57,7 @@ class AdminController extends Controller {
         $message = \Swift_Message::newInstance()
                 ->setSubject('Potwierdzenie dodania produktu')
                 ->setFrom('simple-shop@bs5.pl')
-                ->setTo('wp_admin@bs5.pl')
+                ->setTo('fake@example.com')
                 ->setBody("Do bazy został dodany nowy produkt: {$Product->getName()}");
         
         $this->get('mailer')->send($message);
