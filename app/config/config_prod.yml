@@ -19,3 +19,6 @@ monolog:
             level: debug
         console:
             type:  console
+            
+swiftmailer:
+    disable_delivery:  true

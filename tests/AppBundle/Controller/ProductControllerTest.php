@@ -14,5 +14,7 @@ class ProductControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertContains('Witaj w naszym sklepie!', $crawler->filter('.container h1')->text());
+        
+        $this->assertLessThanOrEqual(10, $crawler->filter('.product')->count());
     }
 }
